@@ -6,13 +6,13 @@
 /*   By: kmira <kmira@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/12 18:55:45 by kmira             #+#    #+#             */
-/*   Updated: 2019/05/13 15:35:38 by kmira            ###   ########.fr       */
+/*   Updated: 2019/05/16 14:51:15 by kmira            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-static void		write_piece(t_tetrimino piece, char *board_str, int board_size)
+void	write_piece(t_tetrimino piece, char *board_str, int board_size)
 {
 	int	bit;
 	int	i;
@@ -38,9 +38,9 @@ static void		write_piece(t_tetrimino piece, char *board_str, int board_size)
 	}
 }
 
-void			print_solution_of(t_tetrimino *tetriminos, int board_size)
+void	print_solution_of(t_tetrimino *tetriminos, int board_size)
 {
-	char	board_str[16 * 16];
+	char	board_str[MAX_BOARD_SIZE * MAX_BOARD_SIZE];
 	int		num_pieces;
 	int		i;
 

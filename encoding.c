@@ -6,7 +6,7 @@
 /*   By: kmira <kmira@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/06 14:40:28 by kmira             #+#    #+#             */
-/*   Updated: 2019/05/13 16:11:17 by kmira            ###   ########.fr       */
+/*   Updated: 2019/05/16 12:59:22 by kmira            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,10 @@ static void	set_mask(char *buffer, unsigned short *tetrimino_mask)
 
 	i = 0;
 	mask = 0b1000000000000000;
+	tetrimino_mask[0] = 0;
+	tetrimino_mask[1] = 0;
+	tetrimino_mask[2] = 0;
+	tetrimino_mask[3] = 0;
 	while (i < 4)
 	{
 		if (buffer[i + 0] == '#')
@@ -80,6 +84,7 @@ static void	classify_piece(t_tetrimino *tetrimino, int piece_index)
 			tetrimino[piece_index].type = g_piece_classifier[i][4];
 			tetrimino[piece_index].height = g_piece_classifier[i][5];
 			tetrimino[piece_index].width = g_piece_classifier[i][6];
+			break ;
 		}
 		i++;
 	}

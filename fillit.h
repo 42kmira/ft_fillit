@@ -6,7 +6,7 @@
 /*   By: kmira <kmira@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/22 18:38:58 by kmira             #+#    #+#             */
-/*   Updated: 2019/05/13 15:21:22 by kmira            ###   ########.fr       */
+/*   Updated: 2019/05/16 20:30:20 by kmira            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@
 */
 
 # ifndef EXIT
-#  define EXIT(error_msg) { ft_putendl(error_msg); exit(EXIT_FAILURE); }
+#  define EXIT(error_msg) ft_puterror(error_msg)
 # endif
 
 # define ERROR()
@@ -50,6 +50,11 @@
 # define MAX_FILE_BYTES 546
 
 # define PIECE_LEN 20
+
+/*
+** Found in file:
+**		input.c
+*/
 
 int		begin_reading(int fd, t_tetrimino *tetrimino);
 int		input_sanitized(char *file_buff, int bytes_read, t_tetrimino *tetrim);
@@ -65,10 +70,32 @@ int		isfully_connected(char *buffer);
 
 void	encode_piece(char *buffer, t_tetrimino *tetrimino, int piece_index);
 
-int		fill_board_with(t_tetrimino *tetriminos);
+/*
+** Found in file:
+**		solver.c
+*/
 
 int		count_pieces(t_tetrimino *tetrimino);
+int		fill_board_with(t_tetrimino *tetriminos);
 
+/*
+** Found in file:
+**		output.c
+*/
+
+void	write_piece(t_tetrimino piece, char *board_str, int board_size);
 void	print_solution_of(t_tetrimino *tetriminos, int board_size);
+
+/*
+** Found in file:
+**		solving_utils.c
+*/
+
+void	place_piece
+	(t_tetrimino *tetrimino, unsigned short *board, int *row, int *col);
+void	remove_piece
+	(t_tetrimino tetrimino, unsigned short *board, int *row, int *col);
+int		board_is_solved
+	(int *current_piece, t_tetrimino *tetrimino, int *row, int *col);
 
 #endif

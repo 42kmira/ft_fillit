@@ -6,7 +6,7 @@
 #    By: kmira <kmira@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/06 16:16:18 by kmira             #+#    #+#              #
-#    Updated: 2019/05/13 17:03:01 by kmira            ###   ########.fr        #
+#    Updated: 2019/05/16 12:51:57 by kmira            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,8 @@ FILES = \
 			main \
 			output \
 			piece_sanitization \
-			solver
+			solver \
+			solving_utils
 
 SRCS = $(addsuffix .c, $(FILES))
 OBJS = $(addsuffix .o, $(FILES))

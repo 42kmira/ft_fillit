@@ -6,7 +6,7 @@
 /*   By: kmira <kmira@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/22 18:33:15 by kmira             #+#    #+#             */
-/*   Updated: 2019/05/13 15:09:09 by kmira            ###   ########.fr       */
+/*   Updated: 2019/05/16 20:43:07 by kmira            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,15 @@ int	main(int aa, char **args)
 	file = args[1];
 	fd = open(file, O_RDONLY);
 	if (fd == INVALID_FILE)
-	{
-
-		EXIT(file);
-	}
+		EXIT("usage: File does not exist");
 	if (begin_reading(fd, tetriminos) == -1)
 	{
 		if (errno == INVALID_FILE_FORMAT)
-			EXIT("error")
+			EXIT("error");
 		else if (errno == INVALID_PIECE_FORMAT)
-			EXIT("error")
+			EXIT("error");
 		else
-			EXIT("error")
+			EXIT("error");
 	}
 	board_size = fill_board_with(tetriminos);
 	print_solution_of(tetriminos, board_size);
