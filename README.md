@@ -11,6 +11,7 @@ Below is partial flowchart.
 <img height="400" src="https://github.com/MrColour/fillit/blob/master/resources/pdf_picture.png" />
 
 Below is are two test I ran using this fillit:
+Test can be found [here](https://github.com/MrColour/fillit/tree/master/resources)
 
 ```
 ABB.CELLH
@@ -47,5 +48,3 @@ CHHIIJJ
 CCCBBBB
 ./fillit ../fillit_test/test_12_piece  0.88s user 0.00s system 99% cpu 0.886 total
 ```
-
-Test can be found [here](https://github.com/MrColour/fillit/tree/master/resources)
