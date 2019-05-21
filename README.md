@@ -1,9 +1,7 @@
 # fillit
 
-Hopefully this passes. It is an iterative bitwise version. There is only one more possible optimization that I can think of,
-each piece can point to the last piece of the same type that has been placed. I partially have this optimization with the
-g_place_prunning array that records the last piece of type[n]. But it can only record the last one and cannot backtrack
-two prior (or more). Good luck, hope you make more improvements if you use this as a skeleton for you Fillit.
+Hopefully this passes. It is an iterative bitwise version. I think I am done. Can't think of more things to do, if you
+find improvements please message me or fill out an issue! Would love to become a better programmer :wink:
 
 A flow chart of the project can be found in the [resources folder](https://github.com/MrColour/fillit/blob/master/resources/Fillit.pdf)
 Below is partial flowchart.
@@ -22,7 +20,7 @@ NKSSMJII.
 PKSRMJJQQ
 PKKRMMJQQ
 PP.RROOOO
-./fillit ../fillit_test/test_19_piece  2933.77s user 9.67s system 98% cpu 49:37.72 total
+./fillit ../fillit_test/test_19_piece  105.34s user 0.15s system 98% cpu 1:46.56 total
 ```
 
 ```
@@ -34,7 +32,7 @@ HHEE.LJG
 HIIIILJJ
 .KK..LL.
 KK......
-./fillit ../fillit_test/test_13_piece  3.54s user 0.00s system 83% cpu 4.253 total
+./fillit ../fillit_test/test_13_piece  1.28s user 0.00s system 99% cpu 1.295 total
 ```
 
 ```
@@ -45,5 +43,5 @@ FFGGLLA
 HHIIJJA
 CHHIIJJ
 CCCBBBB
-./fillit ../fillit_test/test_12_piece  0.88s user 0.00s system 99% cpu 0.886 total
+./fillit ../fillit_test/test_12_piece  0.87s user 0.00s system 99% cpu 0.881 total
 ```
