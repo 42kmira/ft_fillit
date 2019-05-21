@@ -6,7 +6,7 @@
 /*   By: kmira <kmira@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/06 14:40:28 by kmira             #+#    #+#             */
-/*   Updated: 2019/05/16 12:59:22 by kmira            ###   ########.fr       */
+/*   Updated: 2019/05/20 15:00:12 by kmira            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,4 +97,5 @@ void		encode_piece(char *buffer, t_tetrimino *tetrimino, int piece_index)
 	tetrimino[piece_index].row_loc = 0;
 	tetrimino[piece_index].col_loc = 0;
 	tetrimino[piece_index].id = piece_index + 'A';
+	tetrimino[piece_index].last = NULL;
 }

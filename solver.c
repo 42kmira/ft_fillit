@@ -6,41 +6,41 @@
 /*   By: kmira <kmira@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/13 17:30:15 by kmira             #+#    #+#             */
-/*   Updated: 2019/05/16 14:44:57 by kmira            ###   ########.fr       */
+/*   Updated: 2019/05/20 14:57:15 by kmira            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-short g_place_pruning[27][2] =
+t_tetrimino *g_place_pruning[27] =
 {
-	{0, 0},
-	{0, 0},
-	{0, 0},
-	{0, 0},
-	{0, 0},
-	{0, 0},
-	{0, 0},
-	{0, 0},
-	{0, 0},
-	{0, 0},
-	{0, 0},
-	{0, 0},
-	{0, 0},
-	{0, 0},
-	{0, 0},
-	{0, 0},
-	{0, 0},
-	{0, 0},
-	{0, 0},
-	{0, 0},
-	{0, 0},
-	{0, 0},
-	{0, 0},
-	{0, 0},
-	{0, 0},
-	{0, 0},
-	{0, 0}
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL
 };
 
 int		count_pieces(t_tetrimino *tetrimino)

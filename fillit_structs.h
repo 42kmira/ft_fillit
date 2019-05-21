@@ -6,7 +6,7 @@
 /*   By: kmira <kmira@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/13 15:18:38 by kmira             #+#    #+#             */
-/*   Updated: 2019/05/16 16:36:22 by kmira            ###   ########.fr       */
+/*   Updated: 2019/05/20 14:58:20 by kmira            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ typedef struct			s_piece
 	int					row_loc;
 	int					col_loc;
 	int					id;
+	struct s_piece		*last;
 }						t_tetrimino;
 
 enum					e_myerrors {
