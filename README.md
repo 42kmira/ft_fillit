@@ -45,3 +45,8 @@ CHHIIJJ
 CCCBBBB
 ./fillit ../fillit_test/test_12_piece  0.87s user 0.00s system 99% cpu 0.881 total
 ```
+
+I have a graphical repo of [fillit](https://github.com/MrColour/graphic_fillit) if you wanna check it out. It displays the 
+board being solved in real time with some other neat things.
+
+Many thanks to [akharrou](https://github.com/akharrou) whom I collaborated with to create the bitwise implementation found [here](https://github.com/akharrou/42-Project-Fillit). I used this as a base for this project and made changes as I felt right.
