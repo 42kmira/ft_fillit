@@ -6,7 +6,7 @@
 /*   By: kmira <kmira@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/22 19:11:14 by kmira             #+#    #+#             */
-/*   Updated: 2019/02/23 22:04:09 by kmira            ###   ########.fr       */
+/*   Updated: 2019/05/29 20:38:38 by kmira            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,6 @@
 
 char	*ft_str_go_to_end(const char *str)
 {
-	const char	*start;
-
-	start = str;
 	while (1)
 	{
 		if (str[0] == '\0')

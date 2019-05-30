@@ -6,7 +6,7 @@
 /*   By: kmira <kmira@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/12 11:04:56 by kmira             #+#    #+#             */
-/*   Updated: 2019/02/24 16:14:44 by kmira            ###   ########.fr       */
+/*   Updated: 2019/05/29 20:46:02 by kmira            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,23 +34,19 @@ int			ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (n)
 	{
 		if (n >= 8)
+		{
 			if (*(double *)s1 - *(double *)s2 == 0)
 				delta = 8;
 			else
 				return (ft_memcmp_short(s1, s2, n));
+		}
 		else if (n >= 1)
-			if (*(char *)s1 - *(char *)s2 == 0)
-				delta = 1;
-			else
-				return (*(unsigned char *)s1 - *(unsigned char *)s2);
-		else
-			;
+			return (ft_memcmp_short(s1, s2, n));
 		n = n - delta;
 		s1 = ((char *)s1) + delta;
 		s2 = ((char *)s2) + delta;
 	}
 	if (n == 0)
 		return (0);
-	else
-		return (*(unsigned char *)s1 - *(unsigned char *)s2);
+	return (*(unsigned char *)s1 - *(unsigned char *)s2);
 }
