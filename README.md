@@ -9,7 +9,7 @@ is that since we know a max of 26 pieces are available we know a board size that
 pieces, even if they are placed inefficiently. Because of this we can allocate, on the stack mind you, the board size.
 To step it up a notch we also don't use a char map, but rather a C bitfield. Through thoughtful encoding of each piece
 I am able to place or remove each piece with a single with a single xor (^) expression. I am also able to and (&) a
-piece with the board to check if the piece fits as well. To add to that when moving the piece to a different location, column,
+piece with the board to check if the piece fits. To add to that when moving the piece to a different location, column,
 all that needs to be done to align the piece is a bit shift (>>) operation. All of this can be done on the CPU register level
 making it one of the faster bitwise implementations I have seen on that merit alone.
 
